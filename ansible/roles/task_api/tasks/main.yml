@@ -1,0 +1,23 @@
+- name: Install required packages
+  apt:
+    name:
+      - python3
+      - python3-pip
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Create application directory
+  file:
+    path: "{{ app_directory }}"
+    state: directory
+    mode: '0755'
+  become: yes
+
+- name: Create application deployment marker
+  copy:
+    content: "Task Management API configured by Ansible\n"
+    dest: "{{ app_directory }}/deployment.txt"
+    mode: '0644'
+  become: yes
+  notify: Restart task API
