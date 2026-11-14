@@ -15,3 +15,4 @@ A REST API developed using Python and Flask.
 - Ansible
 - Docker
 - Kubernetes
+Feature branch update for DevOps assignment
