@@ -16,3 +16,5 @@ A REST API developed using Python and Flask.
 - Docker
 - Kubernetes
 Feature branch update for DevOps assignment
+
+Jenkins automatic build trigger test.
